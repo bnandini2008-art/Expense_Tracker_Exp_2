@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --primary-blue: #3E7BFA;
+  --primary-dark-blue: #1D4ED8;
+  --bg-gradient-start: #EDF4FD;
+  --bg-gradient-end: #E4EEFB;
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-shadow: 0 10px 30px rgba(160, 185, 220, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #EEF5FD 0%, #E3EDFB 50%, #D8E7FA 100%);
+  min-height: 100vh;
+  color: #2D3E50;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(220, 235, 252, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 175, 220, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 130, 210, 0.7);
+}
+
+/* Glassmorphism & Soft Cards */
+.spendly-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  box-shadow: 0 12px 36px rgba(140, 175, 215, 0.18);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spendly-card:hover {
+  box-shadow: 0 16px 44px rgba(130, 170, 215, 0.25);
+}
+
+/* Pastel Metric Cards with Wavy Graphic Accents */
+.stat-card-balance {
+  background: linear-gradient(135deg, #E6F1FE 0%, #D5E8FD 100%);
+  border: 1.5px solid #C4DDFC;
+}
+.stat-card-income {
+  background: linear-gradient(135deg, #E6F8F5 0%, #D5F3EE 100%);
+  border: 1.5px solid #B8ECE2;
+}
+.stat-card-expenses {
+  background: linear-gradient(135deg, #FDEFEF 0%, #FCE2E2 100%);
+  border: 1.5px solid #F8C8C8;
+}
+
+/* Wavy background decoration */
+.wavy-bg {
+  position: relative;
+  overflow: hidden;
+}
+.wavy-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 140px;
+  height: 90px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Cute Floating Elements */
+.floating-heart {
+  animation: floatHeart 4s ease-in-out infinite alternate;
+}
+@keyframes floatHeart {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* Active Nav Pill */
+.nav-pill-active {
+  background: #CBE2FC;
+  color: #1A4D8C;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(78, 142, 237, 0.2);
+}
+
+/* Primary Action Pill Button */
+.btn-spendly-primary {
+  background: linear-gradient(135deg, #4A7FD9 0%, #3667C6 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px rgba(54, 103, 198, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-spendly-primary:hover {
+  background: linear-gradient(135deg, #3C72D0 0%, #2A58B5 100%);
+  box-shadow: 0 10px 24px rgba(54, 103, 198, 0.45);
+  transform: translateY(-1px);
+}
+.btn-spendly-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(54, 103, 198, 0.3);
+}
+
+/* Input Fields */
+.spendly-input {
+  background: #F3F7FD;
+  border: 1.5px solid #DCE6F5;
+  border-radius: 16px;
+  color: #334E68;
+  transition: all 0.2s ease;
+}
+.spendly-input:focus {
+  background: #FFFFFF;
+  border-color: #4A7FD9;
+  box-shadow: 0 0 0 4px rgba(74, 127, 217, 0.15);
+  outline: none;
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  background: rgba(30, 50, 80, 0.4);
+  backdrop-filter: blur(6px);
+}
